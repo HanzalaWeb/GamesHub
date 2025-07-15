@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎮 Hanzala's GamesHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Hanzala's GamesHub</h1>
+    <div class="search-box">
+      <input type="search" id="search" placeholder="Search games by name..." />
+    </div>
+    <div class="category-filter">
+      <select id="categorySelect">
+        <option value="all">All Categories</option>
+        <option value="action">Action</option>
+        <option value="fps">FPS</option>
+        <option value="adventure">Adventure</option>
+        <option value="casual">Casual</option>
+        <option value="Racing">Racing</option>
+        <option value="battle-royale">Battle Royale</option>
+        <option value="rpg">RPG</option>
+        <option value="simulation">Simulation</option>
+        <option value="platformer">Platformer</option>
+        <option value="stealth">Stealth</option>
+        <option value="strategy">Strategy</option>
+        <option value="horror">Horror</option>
+        <option value="sports">Sports</option>
+        <option value="sandbox">Sandbox</option>
+        <option value="survival">Survival</option>
+        <option value="mmo">MMO</option>
+        <option value="puzzle">Puzzle</option>
+        <option value="indie">Indie</option>
+        <option value="open-world">Open World</option>
+        <option value="fighting">Fighting</option>
+      </select>
+    </div>
+    <div 
+     style="text-align: right;"
+    class="sort-filter">
+      <select id="sortSelect">
+        <option value="default">Sort by Default</option>
+        <option value="newest">Sort by Newest</option>
+        <option value="oldest">Sort by Oldest</option>
+      </select>
+    </div>
+    
+    <div style="text-align: right;">
+      <button id="themeToggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
+  </header>
+
+  <section id="games-container">
+    <!-- Game Cards -->
+    <div class="game-card" data-category="action">
+      <img src="download.jpg" alt="GTA 5">
+      <h2 class="game-name">GTA 5</h2>
+      <p>Released: September 17, 2013</p>
+      <span class="tag">Action</span>
+      <a href="https://www.apunkagames.com/2019/10/gta-5-setup-d1.html" target="_blank">Download</a>
+    </div>
+
+    <div class="game-card" data-category="adventure">
+      <img src="minecraft-review-image-1200x688.JPG" alt="Minecraft">
+      <h2 class="game-name">Minecraft</h2>
+      <p>Released: May 17, 2009</p>
+      <span class="tag">Adeventure</span>
+      <a href="https://tlauncher.org/" target="_blank">Download</a>
+    </div>
+
+    <div class="game-card" data-category="Racing">
+      <img src="ned for.jpg" alt="Need for Speed">
+      <h2 class="game-name">Need for Speed</h2>
+      <p>Released: February 18, 2015</p>
+      <span class="tag">Racing</span>
+      <a href="https://need-for-speed.en.softonic.com/" target="_blank">Download</a>
+    </div>
+
+    <div class="game-card" data-category="fps">
+      <img src="fortnite.jpg" alt="Fortnite">
+      <h2 class="game-name">Fortnite</h2>
+      <p>Released: July 25, 2017</p>
+      <span class="tag">FPS</span>
+      <a href="https://www.epicgames.com/fortnite" target="_blank">Download</a>
+    </div>
+
+    <div class="game-card" data-category="fps">
+      <img src="pubg.jpg" alt="PUBG">
+      <h2 class="game-name">PUBG</h2>
+      <p>Released: December 20, 2017</p>
+      <span class="tag">FPS</span>
+      <a href="https://pubg.com/" target="_blank">Download</a>
+    </div>
+
+    <div class="game-card" data-category="fps">
+      <img src="valorant.jpg" alt="Valorant">
+      <h2 class="game-name">Valorant</h2>
+      <p>Released: June 2, 2020</p>
+      <span class="tag">FPS</span>
+      <a href="https://playvalorant.com/" target="_blank">Download</a>
+    </div>
+     <!-- Game 7 -->
+  <div class="game-card" data-category="fps">
+    <img src="apex.jpg" alt="Apex Legends" />
+    <h2 class="game-name">Apex Legends</h2>
+    <p>Released: February 4, 2019</p>
+    <span class="tag">FPS</span>
+    <a href="https://www.ea.com/games/apex-legends" target="_blank">Download</a>
+  </div>
+
+  <!-- Game 8 -->
+  <div class="game-card" data-category="action">
+    <img src="cyberpunk.jpg" alt="Cyberpunk 2077" />
+    <h2 class="game-name">Cyberpunk 2077</h2>
+    <p>Released: December 10, 2020</p>
+    <span class="tag">Action</span>
+    <a href="https://www.cyberpunk.net/" target="_blank">Download</a>
+  </div>
+
+  <!-- Game 9 -->
+  <div class="game-card" data-category="fps">
+    <img src="cod.jpg" alt="Call of Duty: Warzone" />
+    <h2 class="game-name">Call of Duty: Warzone</h2>
+    <p>Released: March 10, 2020</p>
+    <span class="tag">FPS</span>
+    <a href="https://www.callofduty.com/warzone" target="_blank">Download</a>
+  </div>
+
+  <!-- Game 10 -->
+  <div class="game-card" data-category="casual">
+    <img src="eldenring.jpg" alt="Elden Ring" />
+    <h2 class="game-name">Elden Ring</h2>
+    <p>Released: February 25, 2022</p>
+    <span class="tag">Casual</span>
+    <a href="https://en.bandainamcoent.eu/elden-ring/elden-ring" target="_blank">Download</a>
+  </div>
+
+  <!-- Game 11 -->
+  <div class="game-card" data-category="casual">
+    <img src="fifa23.jpg" alt="FIFA 23" />
+    <h2 class="game-name">FIFA 23</h2>
+    <p>Released: September 30, 2022</p>
+    <span class="tag">Casual</span>
+    <a href="https://www.ea.com/games/fifa/fifa-23" target="_blank">Download</a>
+  </div>
+
+  <!-- Game 12 -->
+  <div class="game-card" data-category="action">   
+    <img src="spiderman.jpg" alt="Spider-Man Remastered" />
+    <h2 class="game-name">Spider-Man Remastered</h2>
+    <p>Released: August 12, 2022</p>
+    <span class="tag">Action</span>
+    <a href="https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/" target="_blank">Download</a>
+  </div>
+  <!-- Game 13 -->
+<div class="game-card" data-category="casual">
+  <img src="assassinscreed.jpg" alt="Assassin's Creed Valhalla" />
+  <h2 class="game-name">Assassin's Creed Valhalla</h2>
+  <p>Released: November 10, 2020</p>
+  <span class="tag">Casual</span>
+  <a href="https://www.ubisoft.com/game/assassins-creed/valhalla" target="_blank">Download</a>
+</div>
+
+<!-- Game 14 -->
+<div class="game-card" data-category="casual">
+  <img src="witcher3.jpg" alt="The Witcher 3" />
+  <h2 class="game-name">The Witcher 3</h2>
+  <p>Released: May 19, 2015</p>
+  <span class="tag">Casual</span>
+  <a href="https://thewitcher.com/en/witcher3" target="_blank">Download</a>
+</div>
+
+<!-- Game 15 -->
+<div class="game-card" data-category="action">
+  <img src="doom.jpg" alt="DOOM Eternal" />
+  <h2 class="game-name">DOOM Eternal</h2>
+  <p>Released: March 20, 2020</p>
+  <span class="tag">Action</span>
+  <a href="https://slayersclub.bethesda.net/en/game/doom" target="_blank">Download</a>
+</div>
+
+<!-- Game 16 -->
+<div class="game-card" data-category="casual">
+  <img src="fallguys.jpg" alt="Fall Guys" />
+  <h2 class="game-name">Fall Guys</h2>
+  <p>Released: August 4, 2020</p>
+  <span class="tag">Casual</span>
+  <a href="https://www.fallguys.com/" target="_blank">Download</a>
+</div>
+
+<!-- Game 17 -->
+<div class="game-card" data-category="casual">
+  <img src="amongus.jpg" alt="Among Us" />
+  <h2 class="game-name">Among Us</h2>
+  <p>Released: June 15, 2018</p>
+  <span class="tag">Casual</span>
+  <a href="https://innersloth.com/games/among-us/" target="_blank">Download</a>
+</div>
+
+<!-- Game 18 -->
+<div class="game-card" data-category="action">
+  <img src="gta4.jpg" alt="GTA IV" />
+  <h2 class="game-name">GTA IV</h2>
+  <p>Released: April 29, 2008</p>
+  <span class="tag">Action</span>
+  <a href="https://www.rockstargames.com/games/IV" target="_blank">Download</a>
+</div>
+
+<!-- Game 19 -->
+<div class="game-card" data-category="action">
+  <img src="csgo.jpg" alt="CS: GO" />
+  <h2 class="game-name">CS: GO</h2>
+  <p>Released: August 21, 2012</p>
+  <span class="tag">Action</span>
+  <a href="https://blog.counter-strike.net/" target="_blank">Download</a>
+</div>
+
+<!-- Game 20 -->
+<div class="game-card" data-category="action">
+  <img src="bf2042.jpg" alt="Battlefield 2042" />
+  <h2 class="game-name">Battlefield 2042</h2>
+  <p>Released: November 19, 2021</p>
+  <span class="tag">Action</span>
+  <a href="https://www.ea.com/games/battlefield/battlefield-2042" target="_blank">Download</a>
+</div>
+
+<!-- Game 21 -->
+<div class="game-card" data-category="adventure">
+  <img src="roblox.jpg" alt="Roblox" />
+  <h2 class="game-name">Roblox</h2>
+  <p>Released: September 1, 2006</p>
+  <span class="tag">Adventure</span>
+  <a href="https://www.roblox.com/" target="_blank">Download</a>
+</div>
+
+<!-- Game 22 -->
+<div class="game-card" data-category="adventure">
+  <img src="residentevil.jpg" alt="Resident Evil 4" />
+  <h2 class="game-name">Resident Evil 4</h2>
+  <p>Released: March 24, 2023</p>
+  <span class="tag">Adventure</span>
+  <a href="https://www.residentevil.com/re4/en-us/" target="_blank">Download</a>
+</div>
+
+<!-- Game 23 -->
+<div class="game-card" data-category="adventure">
+  <img src="left4dead2.jpg" alt="Left 4 Dead 2" />
+  <h2 class="game-name">Left 4 Dead 2</h2>
+  <p>Released: November 17, 2009</p>
+  <span class="tag">Adventure</span>
+  <a href="https://store.steampowered.com/app/550/Left_4_Dead_2/" target="_blank">Download</a>
+</div>
+
+<!-- Game 24 -->
+<div class="game-card" data-category="action">
+  <img src="horizon.jpg" alt="Horizon Zero Dawn" />
+  <h2 class="game-name">Horizon Zero Dawn</h2>
+  <p>Released: August 7, 2020</p>
+  <span class="tag">Action</span>
+  <a href="https://www.playstation.com/en-us/games/horizon-zero-dawn/" target="_blank">Download</a>
+</div>
+    
+  </section>
+
+  <footer>
+    <p>© 2025 Hanzala's GamesHub. All rights reserved.</p>
+  </footer>
+
+  <div style="text-align:center;">
+    <button id="loadMoreBtn" onclick="loadMore()">Load More</button>
+  </div>
+
+  <p id="no-results" style="text-align:center; margin-top: 20px; color: #888; display: none;">
+    No games found.
+  </p>
+
+  <script src="java.js"></script>
+</body>
+</html>
